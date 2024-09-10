@@ -1,0 +1,25 @@
+/* dummy */
+* {
+    margin: 0px;
+}
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center ;
+    align-items: center;
+    gap: 3rem;
+}
+.box {
+    height: 10rem;
+    width: 10rem;
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+}
+.orange {background-color: orange;}
+.red {background-color: red;}
+.blue {background-color: blue;}
+.purple {background-color: blueviolet;}
