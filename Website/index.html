@@ -200,12 +200,12 @@
             outline-offset: -3px;
             border-radius: 5px;
             border: none;
-            cursor: pointer;
             transition: 400ms;
             position: fixed;
             bottom: 5%;
             right: 5%;
-            z-index: -1;
+            /* z-index: -1; */
+            cursor: progress;
         }
 
         .buttongit .textgit {
@@ -364,5 +364,53 @@
         </svg>
     </button>
 </body>
+<script>
+    // String // Number // Boolean // null Q    // undefined
+    // x="hi"
+    // alert(x)
+    let number = 10;
+    let string = "hi"
+    let boolean = false
+    let nullvalue = null
+    let undefinedvalue = undefined
+    console.log(number + " " + string + " " + boolean);
+    console.log(string);
+    console.log(number);
+    console.log(boolean);
+    console.log(nullvalue);
+    console.log(undefinedvalue);
+    let datajs = {
+        name: "Mohanraj M",
+        phone: 987654320,
+        alive: false
+    }
+    let datajson = {
+        "name": "Mohanraj M",
+        "phone": 987654320,
+        "alive": false
+    }
+    console.log(datajs)
+    console.log(datajson)
+    let dataarray = [datajs, datajson, "hi", false]
+    console.log(dataarray[2])
+    let Hi = "hi"
+    let hi = "hi"
+    //hello
+
+    function myfunction(data1) {
+        console.log("Hello d1 " + data1)
+    }
+    // function myfunction(data1, data2) {
+    //     if (data2) {
+    //         console.log(data1 + data2)
+    //     }
+    //     else {
+    //         console.log("data2 not available")
+
+    //     }
+    // }
+    myfunction(1)
+    myfunction(2, true)
+</script>
 
 </html>
