@@ -2,7 +2,7 @@ let x: any = 10;
 x = "hi"
 console.log(x)
 
-function myfunction(data1 :number, data2:number) {
+function myfunction(data1: number, data2: number) {
     if (data2) {
         console.log(data1 + data2)
     }
@@ -11,5 +11,6 @@ function myfunction(data1 :number, data2:number) {
 
     }
 }
-myfunction(1)
-myfunction(1, false)
+// myfunction(1)
+// myfunction(1, false)
+myfunction(1, 2)
