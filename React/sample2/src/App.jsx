@@ -1,19 +1,22 @@
+import Footer from "./components/Footer";
 import Navbar from "./components/NavBar";
 
 const App = () => {
-    const Appname = "M-A-X"
-    const Appdata = "hello"
+    const appname = "Footer Data"
 
     const data = {
         Appname: "M-A-X",
-        Appdata: "hello"
+        Appdata: "Inc"
     }
+
     return (
         <>
             <div className="h-screen w-screen flex flex-col justify-start items-center">
                 <Navbar data={data} />
+                {/* login */}
+                <Footer appdata={appname} />
             </div>
-            {/* login */}
+
         </>
     )
 }
