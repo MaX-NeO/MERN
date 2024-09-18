@@ -15,31 +15,21 @@ const Contact = () => {
     isalive: false
   })
 
-  const [visible, setvisible] = useState(false)
 
   if (!nulldata) {
     setNullData("Nulldata")
   }
   console.log(nulldata)
-
-
-
   // useEffect(() => {
   //   console.log("Mounted")
   // }, [data])
+  const [visible, setvisible] = useState(false)
   return (
     <>
-      {
-        visible && (
-          <>
-
-            <div className=" h-40 w-40 bg-red z-50">Contact</div>
-            <button onClick={() => setvisible(!visible)}> close </button>
-
-          </>
-        )
-      }
-      <button onClick={() => setvisible(true)}> delete </button>
+ 
+      <div className="h-[80vh] w-screen flex justify-center items-center -z-10">
+        <button  className="bg-red-500 p-3 text-white w-32 rounded-sm"> Delete </button>
+      </div>
     </>
   )
 }

@@ -7,6 +7,9 @@
     padding: 0px;
 }
 .active{
-    background-color: black;
-    color: blueviolet;
+    background-color: #c792f8;
+    color: white;
+    /* padding: 0.1rem; */
+    border-radius: 5px;
+    
 }
