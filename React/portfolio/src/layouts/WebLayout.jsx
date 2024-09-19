@@ -7,20 +7,26 @@ const WebLayout = () => {
 
     return (
         <>
-            <Navbar />
-            {isloggedin ? (
-                <Suspense fallback={"loading"}>
-                    <Outlet />
-                </Suspense>
+            <div className='h-screen w-screen overflow-x-hidden '>
 
-            ) :
-                (
-                    <>
-                        Login to access data
-                    </>
-                )
+                <Navbar />
+                <div className='h-[95vh] w-full flex flex-col justify-start items-center'>
 
-            }
+                    {isloggedin ? (
+                        <Suspense fallback={"loading"}>
+                            <Outlet />
+                        </Suspense>
+
+                    ) :
+                        (
+                            <>
+                                Login to access data
+                            </>
+                        )
+
+                    }
+                </div>
+            </div>
         </>
     )
 }

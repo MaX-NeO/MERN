@@ -6,10 +6,8 @@
     margin: 0px;
     padding: 0px;
 }
-.active{
-    background-color: #c792f8;
-    color: white;
-    /* padding: 0.1rem; */
-    border-radius: 5px;
-    
+
+.active {
+    border-bottom: 4px solid #8614f0;
+
 }
