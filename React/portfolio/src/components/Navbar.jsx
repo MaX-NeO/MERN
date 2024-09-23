@@ -38,7 +38,7 @@ const Navbar = () => {
     const [visible, setvisible] = useState(false)
     return (
         <>
-            <div className="w-full h-[5vh] flex justify-center items-center bg-white text-purple-500 shadow-md shadow-purple-100 rounded-sm sticky top-0 left-0">
+            <div className="w-full h-[5vh] flex justify-center items-center bg-white text-purple-500 shadow-md shadow-purple-100 rounded-sm sticky top-0 left-0 z-50">
                 <div className="w-[80%] h-full flex justify-center items-center flex-row">
                     <div className='w-1/2 flex h-full justify-start items-center font-bold text-xl text-purple-500'> Mohanraj M</div>
                     <div className='w-1/2 flex  h-full justify-end items-center'>

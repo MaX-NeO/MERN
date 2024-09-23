@@ -1,8 +1,8 @@
-import { Plus } from 'lucide-react'
+import { Check, MessageCircleWarning, Plus, Trash } from 'lucide-react'
 import React, { useRef, useState } from 'react'
 import { addProject } from '../services/api'
 import { Toaster, toast } from 'sonner'
-const AddComponent = () => {
+const AddComponent = ({ fetchprojects }) => {
     const titleref = useRef(null)
     const descref = useRef(null)
     const linkref = useRef(null)
@@ -21,11 +21,18 @@ const AddComponent = () => {
             console.log(response.status)
             if (response.status === 201) {
                 console.log("added")
-
+                toast('Project added !', {
+                    className: 'bg-gradient-to-r from-green-500 to-lime-500 rounded-lg shadow-lg text-white p-3 flex gap-5 text-lg font-bold',
+                    icon: <Check />,
+                });
+                fetchprojects()
             }
         } catch (error) {
             toast.error(error)
-
+            toast('Error', {
+                className: 'bg-gradient-to-r from-yellow-500 to-amber-500 rounded-lg shadow-lg text-white p-3 flex gap-5 text-lg font-bold',
+                icon: <MessageCircleWarning />,
+            });
         }
         setvisible(false)
     }
@@ -33,9 +40,8 @@ const AddComponent = () => {
     const [visible, setvisible] = useState(false)
     return (
         <>
-            <button onClick={() => setvisible(true)} className='flex justify-center items-center text-white bg-purple-500 px-2 py-1 rounded-sm'>
-                Add
-                <Plus className='h-6 w-6 ml-2' />
+            <button onClick={() => setvisible(true)} className='flex justify-center items-center text-white bg-purple-500 p-1 rounded-sm'>
+                <Plus className='h-8 w-8' />
             </button>
             {
                 visible && (
@@ -65,10 +71,10 @@ const AddComponent = () => {
                                 </div>
                             </div>
                         </div>
-                        <Toaster richColors />
                     </>
                 )
             }
+            <Toaster richColors />
         </>
     )
 }
