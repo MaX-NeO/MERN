@@ -20,7 +20,7 @@ router.post('/add', async (req, res) => {
 
         }
         const savedata = await newprojectdata.save()
-        res.status(201).json(savedata)
+        res.status(200).json(savedata)
 
     } catch (error) {
         res.status(500).json(error)
@@ -29,6 +29,7 @@ router.post('/add', async (req, res) => {
 router.put('/edit/:id', async (req, res) => {
     try {
         const id = req.params.id;
+        // const { id } = req.params;
         const currentrecord = await Projects.findOne({ _id: id })
         if (!currentrecord) {
             res.status(404).json({ message: "Project not found !" })
